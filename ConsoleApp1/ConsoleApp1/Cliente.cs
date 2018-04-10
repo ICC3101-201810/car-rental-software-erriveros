@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Cliente
+    abstract class Cliente
     {
-        string nombre;
-        public Cliente(string miNombre)
+        
+        public Cliente(string miNombre,string miLicencia)
         {
-            nombre = miNombre;
+           
+        }
+
+        public void GetInfo()
+        {
+            return
         }
     }
 }

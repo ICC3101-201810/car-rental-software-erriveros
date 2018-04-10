@@ -8,8 +8,7 @@ namespace ConsoleApp1
 {
     class Sucursal
     {
-        List<Sucursal> Sucursales = new List<Sucursal>();
-        List<Vehiculo> vehiculos = new List<Vehiculo>();
+        public List<Vehiculo> vehiculos = new List<Vehiculo>();
         string nombre;
         public Sucursal(List<Vehiculo> miVehiculos, string miNombre)
         {
@@ -42,7 +41,7 @@ namespace ConsoleApp1
                 removeV = vehiculo;
                 vehiculos.Remove(removeV);
                 int nuevaCant = b - vehiculo.getCantidad();
-                Vehiculo nuevoV = new Vehiculo(vehiculo.getNombre(), nuevaCant);
+                Vehiculo nuevoV = new Vehiculo(vehiculo.getNombre(), nuevaCant,vehiculo.licencia);
                 vehiculos.Add(nuevoV);
             }
             

@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Persona: Cliente
+    class Organizacion : Cliente
     {
+        public bool autorizacion;
         public string nombre;
         public string licencia;
-        public Persona(string miNombre,string miLicencia)
+        public Organizacion(string miNombre,string miLicencia, bool miAutorizacion)
             :base(miNombre,miLicencia)
         {
-
-            
+            autorizacion = miAutorizacion;
+            nombre = miNombre;
+            licencia = miLicencia;
         }
-
     }
 }

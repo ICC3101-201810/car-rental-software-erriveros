@@ -6,13 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Accesorio
+    class Auto
     {
-
-        public Accesorio(string miNombre)
-        {
-
-        }
-
     }
 }

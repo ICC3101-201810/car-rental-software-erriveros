@@ -8,11 +8,27 @@ namespace ConsoleApp1
 {
     class Empresa:Cliente
     {
-        string autorizacion;
-        public Empresa(string miNombre,string miAutorizacion)
-            :base (miNombre)
+        public bool autorizacion;
+        public string nombre;
+        public string licencia;
+        public Empresa(string miNombre,bool miAutorizacion,string miLicencia)
+            :base (miNombre,miLicencia)
         {
             autorizacion = miAutorizacion;
+            licencia = miLicencia;
+            nombre = miNombre;
+        }
+
+        public bool eConseguirPermiso()
+        {
+            double posibilidades;
+            Random rnd = new Random();
+            posibilidades = rnd.Next(100);
+            if (posibilidades > 65)
+            {
+                return false;
+            }
+            else return true;
         }
             
     }

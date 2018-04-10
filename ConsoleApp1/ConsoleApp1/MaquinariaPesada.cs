@@ -6,13 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Accesorio
+    class MaquinariaPesada:Vehiculo
     {
-
-        public Accesorio(string miNombre)
-        {
-
-        }
-
     }
 }

@@ -10,10 +10,12 @@ namespace ConsoleApp1
     {
         string tipo;
         int cantidad;
-        public Vehiculo(string miTipo,int miCantidad)
+        public string licencia;
+        public Vehiculo(string miTipo,int miCantidad,string miLicencia)
         {
             tipo = miTipo;
             cantidad = miCantidad;
+            licencia = miLicencia;
         }
         public string getNombre()
         {
