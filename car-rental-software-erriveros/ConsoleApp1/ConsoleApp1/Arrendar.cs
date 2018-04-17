@@ -129,12 +129,38 @@ namespace ConsoleApp1
                 int HayStock = 0;
                 int Puede = 0;
                 string coridaOno;
+                string TeleOno;
                 foreach (Vehiculo v in sucursal.vehiculos)
                 {
                     Console.WriteLine("{0}: Tipo de vehiculo {1}, Marca {2}, Cantidad en sucursal {3}", cont, v.tipo, v.marca, v.cantidad);
                 }
                 Console.WriteLine("Ingrese el tipo de vehiculo que quiere arrendar (Auto,Bus,Maquinaria) : ");
                 string tipo = Console.ReadLine();
+                if (tipo == "Auto")
+                {
+                    Console.WriteLine("si desea una corrida de asiento mas ingrese (1) o si prefiere un maletero mas grande ingrese (2)");
+                    coridaOno = (Console.ReadLine());
+                    if (coridaOno == "1")
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("ha elegido una corrida de asiento mas!");
+                        Console.ResetColor();
+                    }
+                    else if (coridaOno == "1")
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("ha elegido un maletero mas grande!");
+                        Console.ResetColor();
+                    }
+                    Console.WriteLine("si desea un reproductor de DVD ingrese (1) o sino ingrese (2)");
+                    coridaOno = (Console.ReadLine());
+                    if (coridaOno == "1")
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("ha elegido tener reporductor DVD !");
+                        Console.ResetColor();
+                    }
+                }
                 Console.WriteLine("Ingrese la marca del vehiculo que quiere arrendar : ");
                 string marca = Console.ReadLine();
                 foreach (Vehiculo v in sucursal.vehiculos)
@@ -156,22 +182,6 @@ namespace ConsoleApp1
                                 Console.WriteLine("Se ha agregado el vehivulo a su carro!");
                                 Console.ResetColor();
 
-                                if(tipo=="Auto")
-                                {
-                                    Console.WriteLine("si desea una corrida de asiento mas ingrese (1) o si prefiere un maletero mas grande ingrese (2)");
-                                    coridaOno =(Console.ReadLine());
-                                    if (coridaOno=="1")
-                                    {
-                                        Console.ForegroundColor = ConsoleColor.Green;
-                                        Console.WriteLine("ha elegido una corrida de asiento mas!");
-                                        Console.ResetColor();
-                                    }
-                                    else if (coridaOno == "1")
-                                    {
-                                        Console.ForegroundColor = ConsoleColor.Green;
-                                        Console.WriteLine("ha elegido un maletero mas grande!");
-                                        Console.ResetColor();
-                                    }
                                 }
                                
                             }
@@ -181,7 +191,6 @@ namespace ConsoleApp1
 
                     }
 
-                }
                 if (HayStock == 0)
                 {
                     Console.Beep();
@@ -198,7 +207,7 @@ namespace ConsoleApp1
                     Console.Beep();
                     Console.Beep();
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Perdon pero no tiene la licecncia para arrendar este tipo de vehiculo");
+                    Console.WriteLine("Perdon pero no tiene la licencia para arrendar este tipo de vehiculo");
                     Console.ResetColor();
                     Console.WriteLine("Para volver a ingresar apriete enter, para cancelar su carro o salir ingrese (1)");
                 }

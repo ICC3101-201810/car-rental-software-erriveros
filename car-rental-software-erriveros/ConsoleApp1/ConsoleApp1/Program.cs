@@ -8,11 +8,12 @@ namespace ConsoleApp1
         public static void Main(string[] args)
         {
             List<Vehiculo> vehiculos = new List<Vehiculo>();
-            Vehiculo vehiculoA = new Auto(20, "Auto", "Mazda");
+            Vehiculo vehiculoA = new Auto(20, "Auto", "Mazda",true,true,false);
+            Vehiculo vehiculoAA = new Auto(20, "Auto", "Tesla", false, true, true);
             Vehiculo vehiculoB = new Bus(15, "Bus", "Jax");
             Vehiculo vehiculoC = new Moto(30, "Moto", "BMW");
-                
-            Sucursal sucursal = new Sucursal(vehiculos,12345);
+
+            Sucursal sucursal = new Sucursal(vehiculos, 12345);
             string opcion = "0";
             for (; ; )
             {
@@ -26,7 +27,7 @@ namespace ConsoleApp1
                 Console.ResetColor();
                 Console.WriteLine("Para ingresar los datos del auto que quiere arendar presione enter, para salir del programa ingrese 1: ");
                 opcion = Console.ReadLine();
-                if (opcion=="1")
+                if (opcion == "1")
                 {
                     break;
                 }
@@ -34,10 +35,13 @@ namespace ConsoleApp1
                 Console.WriteLine("Para agregar accesorios presione enter, para salir del programa presione (1)");
 
                 Console.WriteLine("para volver a ingresar los datos presione (enter), para salir del programa presion (1): ");
-                if (opcion=="1")
+                if (opcion == "1")
                 {
                     break;
                 }
             }
+        }
+    }
+}
                     
 
