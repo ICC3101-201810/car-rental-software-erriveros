@@ -4,8 +4,8 @@ namespace ConsoleApp1
     public class Moto : Vehiculo
     {
 
-        public Moto(int miCantidad, string miModelo)
-            : base(miCantidad, miModelo)
+        public Moto(int miCantidad, string miModelo, string miMarca)
+            : base(miCantidad, miModelo,miMarca)
         {
 
         }

@@ -53,7 +53,10 @@ namespace ConsoleApp1
                 tipo = Console.ReadLine();
                 if (tipo != "Persona" && tipo != "Institucion" && tipo != "Empresa" && tipo != "Organizacion")
                 {
+                    Console.Beep();
+                    Console.Beep();
                     Console.WriteLine("Error, valor ingresado no valido (Acuerde usar mayuscula para la priemra letra)");
+
                     continue;
                 }
                 else break;
@@ -62,7 +65,7 @@ namespace ConsoleApp1
             DateTime.Today.ToString();
             int licencia;
             string nombre;
-            string fechaI = DateTime.Today.ToString()
+            string fechaI = DateTime.Today.ToString();
             if (tipo == "Persona")
             {
                 Console.WriteLine("Ingrese su nombre: ");
@@ -125,11 +128,12 @@ namespace ConsoleApp1
                 int cont = 0;
                 int HayStock = 0;
                 int Puede = 0;
+                string coridaOno;
                 foreach (Vehiculo v in sucursal.vehiculos)
                 {
                     Console.WriteLine("{0}: Tipo de vehiculo {1}, Marca {2}, Cantidad en sucursal {3}", cont, v.tipo, v.marca, v.cantidad);
                 }
-                Console.WriteLine("Ingrese el tipo de vehiculo que quiere arrendar : ");
+                Console.WriteLine("Ingrese el tipo de vehiculo que quiere arrendar (Auto,Bus,Maquinaria) : ");
                 string tipo = Console.ReadLine();
                 Console.WriteLine("Ingrese la marca del vehiculo que quiere arrendar : ");
                 string marca = Console.ReadLine();
@@ -147,8 +151,29 @@ namespace ConsoleApp1
                                 v.cantidadTiempo = Int32.Parse(Console.ReadLine());
                                 v.cantidad -= 1;
                                 cliente.vehiculosAriendo.Add(v);
+                                Console.Beep();
+                                Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine("Se ha agregado el vehivulo a su carro!");
-                                Console.WriteLine("Para arrendar otro vehiculo presione enter, para cancelar o salir ingrese (1)");
+                                Console.ResetColor();
+
+                                if(tipo=="Auto")
+                                {
+                                    Console.WriteLine("si desea una corrida de asiento mas ingrese (1) o si prefiere un maletero mas grande ingrese (2)");
+                                    coridaOno =(Console.ReadLine());
+                                    if (coridaOno=="1")
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Green;
+                                        Console.WriteLine("ha elegido una corrida de asiento mas!");
+                                        Console.ResetColor();
+                                    }
+                                    else if (coridaOno == "1")
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Green;
+                                        Console.WriteLine("ha elegido un maletero mas grande!");
+                                        Console.ResetColor();
+                                    }
+                                }
+                                Console.WriteLine(" S(1)");
                                 string opcion = Console.ReadLine();
                                 
                             }
@@ -161,13 +186,22 @@ namespace ConsoleApp1
                 }
                 if (HayStock == 0)
                 {
+                    Console.Beep();
+                    Console.Beep();
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("El vehiculo que busca esta agotado de stock");
+                    Console.ResetColor();
+
                     Console.WriteLine("Para volver a ingresar apriete enter, para cancelar su carro o salir ingrese (1)");
                     string opcion = Console.ReadLine();
                 }
                 else if (Puede==0)
                 {
+                    Console.Beep();
+                    Console.Beep();
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Perdon pero no tiene la licecncia para arrendar este tipo de vehiculo");
+                    Console.ResetColor();
                     Console.WriteLine("Para volver a ingresar apriete enter, para cancelar su carro o salir ingrese (1)");
                 }
             }

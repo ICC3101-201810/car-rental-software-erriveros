@@ -1,16 +1,18 @@
 ﻿<Properties StartupConfiguration="{15B5C5B7-A6B0-4232-A92A-DFC6943C14CD}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ConsoleApp1/Sucursal.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ConsoleApp1/Moto.cs">
     <Files>
-      <File FileName="ConsoleApp1/Program.cs" Line="27" Column="21" />
-      <File FileName="ConsoleApp1/Sucursal.cs" Line="5" Column="18" />
+      <File FileName="ConsoleApp1/Program.cs" Line="15" Column="63" />
+      <File FileName="ConsoleApp1/Arrendar.cs" Line="160" Column="59" />
+      <File FileName="ConsoleApp1/Sucursal.cs" Line="55" Column="13" />
       <File FileName="ConsoleApp1/Accesorio.cs" Line="4" Column="18" />
-      <File FileName="ConsoleApp1/Arrendar.cs" Line="125" Column="19" />
       <File FileName="ConsoleApp1/Ariendo.cs" Line="5" Column="18" />
       <File FileName="ConsoleApp1/Auto.cs" Line="4" Column="18" />
-      <File FileName="ConsoleApp1/Cliente.cs" Line="5" Column="27" />
+      <File FileName="ConsoleApp1/Cliente.cs" Line="8" Column="48" />
       <File FileName="ConsoleApp1/Empresa.cs" Line="4" Column="18" />
       <File FileName="ConsoleApp1/Persona.cs" Line="4" Column="18" />
-      <File FileName="ConsoleApp1/Vehiculo.cs" Line="13" Column="10" />
+      <File FileName="ConsoleApp1/Vehiculo.cs" Line="21" Column="10" />
+      <File FileName="ConsoleApp1/Bus.cs" Line="4" Column="18" />
+      <File FileName="ConsoleApp1/Moto.cs" Line="7" Column="61" />
     </Files>
     <Pads>
       <Pad Id="ClassPad">
@@ -18,7 +20,7 @@
           <Node name="ConsoleApp1" expanded="True">
             <Node name="ConsoleApp1" expanded="True">
               <Node name="ConsoleApp1" expanded="True">
-                <Node name="ConsoleApp1.Vehiculo" selected="True" />
+                <Node name="ConsoleApp1.Moto" selected="True" />
               </Node>
             </Node>
           </Node>

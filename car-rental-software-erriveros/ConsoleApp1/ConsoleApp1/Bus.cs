@@ -4,8 +4,8 @@ namespace ConsoleApp1
     public class Bus : Vehiculo
     {
 
-        public Bus(int miCantidad, string miTipo)
-            : base(miCantidad, miTipo)
+        public Bus(int miCantidad, string miTipo,string marca)
+            : base(miCantidad, miTipo,marca)
         {
 
         }

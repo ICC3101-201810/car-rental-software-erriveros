@@ -7,12 +7,23 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
-            Sucursal sucursal = new Sucursal();
+            List<Vehiculo> vehiculos = new List<Vehiculo>();
+            Vehiculo vehiculoA = new Auto(20, "Auto", "Mazda");
+            Vehiculo vehiculoB = new Bus(15, "Bus", "Jax");
+            Vehiculo vehiculoC = new Moto(30, "Moto", "BMW");
+                
+            Sucursal sucursal = new Sucursal(vehiculos,12345);
             string opcion = "0";
             for (; ; )
             {
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("*********** HOLA BIENVENIDO A RENTACAR ***********");
+                Console.ResetColor();
                 Cliente cliente = Arendar.CrearNuevoCliente();
+                Console.Beep();
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Se ha creado un nuevo usario con exito!");
+                Console.ResetColor();
                 Console.WriteLine("Para ingresar los datos del auto que quiere arendar presione enter, para salir del programa ingrese 1: ");
                 opcion = Console.ReadLine();
                 if (opcion=="1")
