@@ -153,8 +153,8 @@ namespace ConsoleApp1
                         Console.ResetColor();
                     }
                     Console.WriteLine("si desea un reproductor de DVD ingrese (1) o sino ingrese (2)");
-                    coridaOno = (Console.ReadLine());
-                    if (coridaOno == "1")
+                    TeleOno = (Console.ReadLine());
+                    if (TeleOno == "1")
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("ha elegido tener reporductor DVD !");
