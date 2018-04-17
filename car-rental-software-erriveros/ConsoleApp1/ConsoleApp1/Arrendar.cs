@@ -59,9 +59,10 @@ namespace ConsoleApp1
                 else break;
 
             }
+            DateTime.Today.ToString();
             int licencia;
             string nombre;
-            string fechaI = DateTime.Now.ToString("HH: mm:ss tt");
+            string fechaI = DateTime.Today.ToString()
             if (tipo == "Persona")
             {
                 Console.WriteLine("Ingrese su nombre: ");
@@ -116,6 +117,62 @@ namespace ConsoleApp1
                 Console.WriteLine("Sucursal: {0}", s.ID);
             }
         }
+
+        public static void GetInfoAuto(Cliente cliente, Sucursal sucursal)
+        {
+            for (; ; )
+            {
+                int cont = 0;
+                int HayStock = 0;
+                int Puede = 0;
+                foreach (Vehiculo v in sucursal.vehiculos)
+                {
+                    Console.WriteLine("{0}: Tipo de vehiculo {1}, Marca {2}, Cantidad en sucursal {3}", cont, v.tipo, v.marca, v.cantidad);
+                }
+                Console.WriteLine("Ingrese el tipo de vehiculo que quiere arrendar : ");
+                string tipo = Console.ReadLine();
+                Console.WriteLine("Ingrese la marca del vehiculo que quiere arrendar : ");
+                string marca = Console.ReadLine();
+                foreach (Vehiculo v in sucursal.vehiculos)
+                {
+                    if (v.tipo == tipo && v.marca == marca)
+                    {
+                        if (v.cantidad > 0)
+                        {
+                            HayStock = 1;
+                            if(cliente.SePuede(v))
+                            {
+                                Puede = 1;
+                                Console.WriteLine("Ingrese la cantidad de tiempo que desea arrendar este auto");
+                                v.cantidadTiempo = Int32.Parse(Console.ReadLine());
+                                v.cantidad -= 1;
+                                cliente.vehiculosAriendo.Add(v);
+                                Console.WriteLine("Se ha agregado el vehivulo a su carro!");
+                                Console.WriteLine("Para arrendar otro vehiculo presione enter, para cancelar o salir ingrese (1)");
+                                string opcion = Console.ReadLine();
+                                
+                            }
+
+
+                        }
+
+                    }
+
+                }
+                if (HayStock == 0)
+                {
+                    Console.WriteLine("El vehiculo que busca esta agotado de stock");
+                    Console.WriteLine("Para volver a ingresar apriete enter, para cancelar su carro o salir ingrese (1)");
+                    string opcion = Console.ReadLine();
+                }
+                else if (Puede==0)
+                {
+                    Console.WriteLine("Perdon pero no tiene la licecncia para arrendar este tipo de vehiculo");
+                    Console.WriteLine("Para volver a ingresar apriete enter, para cancelar su carro o salir ingrese (1)");
+                }
+            }
+        }
+            
 
     }
 }

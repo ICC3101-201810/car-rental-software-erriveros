@@ -6,10 +6,13 @@ namespace ConsoleApp1
         public int precio;
         public int cantidad;
         public string tipo;
-        public Vehiculo(int miCantidad, string miTipo)
+        public string marca;
+        public int cantidadTiempo;
+        public Vehiculo(int miCantidad, string miTipo,string miMarca)
         {
             cantidad = miCantidad;
             tipo = miTipo;
+            marca = miMarca;
         }
 
 

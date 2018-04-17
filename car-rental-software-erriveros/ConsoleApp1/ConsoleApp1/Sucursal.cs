@@ -40,11 +40,11 @@ namespace ConsoleApp1
             }
         }
 
-        public Vehiculo CrearNuevoVehiculo(int cantidad, string tipo)
+        public Vehiculo CrearNuevoVehiculo(int cantidad, string tipo,string Marca)
         {
             if (tipo == "Auto")
             {
-                Vehiculo vehiculo = new Auto(cantidad, tipo);
+                Vehiculo vehiculo = new Auto(cantidad, tipo,Marca);
                 return vehiculo;
             }
             if (tipo == "Moto")
