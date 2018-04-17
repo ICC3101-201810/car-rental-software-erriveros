@@ -173,9 +173,7 @@ namespace ConsoleApp1
                                         Console.ResetColor();
                                     }
                                 }
-                                Console.WriteLine(" S(1)");
-                                string opcion = Console.ReadLine();
-                                
+                               
                             }
 
 
